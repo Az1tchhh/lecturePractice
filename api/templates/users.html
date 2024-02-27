@@ -6,9 +6,9 @@
 </head>
 <body>
     <ol>
-        <% for user in users %>
-            <li>{{ user.name }}</li>
-        <% endfor %>
+        {% for user in users %}
+            <li>{{ user.full_name }}</li>
+        {% endfor %}
     </ol>
 </body>
 </html>

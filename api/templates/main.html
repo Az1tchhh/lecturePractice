@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Hello, {{full_name}}!</h1>
+
+    <h2>Here are the commentaries</h2>
+    {% for commentary in commentaries %}
+            <li>
+                <strong>User:</strong> {{ commentary.user }}<br>
+                <strong>Official Answer(topic):</strong> {{ commentary.official_answer }}<br>
+                <strong>Text:</strong> {{ commentary.text }}<br>
+                <strong>Commentary Type:</strong> {{ commentary.commentary_type }}<br>
+                <strong>Public:</strong> {{ commentary.public }}<br>
+                <hr>
+            </li>
+        {% endfor %}
+    <ul>
+        {% csrf_token %}
+        {{ form.as_p }}
+    </ul>
+</body>
+</html>
